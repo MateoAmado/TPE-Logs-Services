@@ -37,7 +37,7 @@ public class LogController {
 
     @Operation(summary = "Crea un nuevo log", description = "Crea un nuevo log en el sistema")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "201", description = "Se guardó exitosamente la cuenta"),
+            @ApiResponse(responseCode = "201", description = "Se guardó exitosamente el Log"),
            })
     @PostMapping
     public ResponseEntity<Log> guardarLog(@RequestBody Log log){
@@ -45,7 +45,7 @@ public class LogController {
        return new ResponseEntity<>(log, HttpStatus.CREATED);
     }
 
-    @Operation(summary = "Eliminar una cuenta", description = "Elimina un log por su ID")
+    @Operation(summary = "Eliminar un Log", description = "Elimina un log por su ID")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "Se eliminó exitosamente el log"),
            })
